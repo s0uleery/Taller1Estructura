@@ -1,6 +1,5 @@
 #include <iostream>
 
-using namespace System;
 using namespace std;
 
 void menu(){
@@ -52,7 +51,6 @@ int main() {
             cout << "Opcion no valida " << endl;
             break;
         } 
-    System("cls");
 
     }while(op != 0 );
 
