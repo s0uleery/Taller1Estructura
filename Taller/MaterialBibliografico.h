@@ -3,10 +3,10 @@
 class MaterialBibliografico
 {
     private:
-        string nombre;
+        std::string "nombre";
         int isbn;
-        string autor;
-        boolean prestado;
+        std::string "autor";
+        bool prestado;
 
     public:
     MaterialBibliografico();

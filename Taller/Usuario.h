@@ -1,12 +1,11 @@
 #include <iostream>
-#include <string>
 
 class Usuario
 {
     private:
-        string nombre;
+        std::string 'nombre';
         int id;
-        string materialBibliografico[5];
+        std::string materialBibliografico[5];
 
     public:
         Usuario(string nombre, int id);
