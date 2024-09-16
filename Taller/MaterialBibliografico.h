@@ -1,15 +1,31 @@
-#include <iostream>
+#include<iostream>
+#pragma once
+#include <string>
+
+using namespace std;
 
 class MaterialBibliografico
 {
     private:
-        std::string "nombre";
+        string nombre;
         int isbn;
-        std::string "autor";
+        string autor;
         bool prestado;
 
     public:
-    MaterialBibliografico();
-    virtual mostrarInformacion();
-    //falta el destructor
-}
+
+    MaterialBibliografico(string,int,string,bool);
+    string getNombre();
+    int getIsbn();
+    string getAutor();
+
+    void setNombre(string);
+    void setIsbn(int);
+    void setAutor(string);
+    void setPrestado(bool);
+
+    virtual void mostrarInformacion();
+    virtual ~MaterialBibliografico();
+    //falta el destructor 
+    //creo que lo hice bien :P
+};
