@@ -1,16 +1,26 @@
-#include <iostream>
+#include<iostream>
+#pragma once
+#include <string>
+#include "MaterialBibliografico.h"
 
-class Usuario
-{
-    private:
-        std::string 'nombre';
-        int id;
-        std::string materialBibliografico[5];
+using namespace std;
 
-    public:
-        Usuario(string nombre, int id);
-        void prestarMaterial();
-        void devolverMateral();
-        void mostrarMaterialesPrestados();
-        //falta el destructor
-}
+class Usuario {
+private:
+    string nombre;
+    int id;
+    MaterialBibliografico* materialBibliografico[5]; 
+
+public:
+    Usuario(string, int);
+    string getNombre();
+    int getId();
+
+    void setNombre(string);
+    void setId(int);
+
+    void prestarMaterial(MaterialBibliografico*);
+    void devolverMateral(MaterialBibliografico*);
+    void mostrarMaterialesPrestados();
+    ~Usuario();
+};
