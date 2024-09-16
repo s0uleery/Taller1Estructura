@@ -46,8 +46,8 @@ void Usuario :: devolverMateral(MaterialBibliografico* material){
 void Usuario :: mostrarMaterialesPrestados(){
     cout<< "Materiales prestados a " << nombre << " (ID: " << id << "):" << endl;
     for (int i = 0; i < 5; ++i) {
-            if (materialBibliografico[i] != nullptr) {
-                materialBibliografico[i]->mostrarInformacion();
-            }
+        if (materialBibliografico[i] != nullptr) {
+            materialBibliografico[i]->mostrarInformacion();
         }
+    }
 }
