@@ -19,7 +19,7 @@ void Biblioteca :: agregarMaterial(MaterialBibliografico* material){
    }
 }
 
-MaterialBibliografico* Biblioteca :: mostrarMaterial(){
+void Biblioteca :: mostrarMaterial(){
     for (int i = 0; i < cantidadMateriales; ++i) {
             biblioteca[i]->mostrarInformacion();
     }
@@ -28,11 +28,10 @@ MaterialBibliografico* Biblioteca :: mostrarMaterial(){
 MaterialBibliografico* Biblioteca :: buscarMaterial(string buscador){
     for (int i = 0; i < cantidadMateriales; ++i) {
         if(biblioteca[i] -> getNombre() == buscador || biblioteca[i] -> getAutor() == buscador){
-            return biblioteca[i];
-        }else{
-            return nullptr;
+                return biblioteca[i];
+            }
         }
-    }
+        return nullptr;
 }
         
 Biblioteca :: ~Biblioteca() {

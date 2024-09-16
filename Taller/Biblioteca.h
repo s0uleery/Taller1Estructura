@@ -16,7 +16,7 @@ class Biblioteca{
     public:
         Biblioteca();
         void agregarMaterial(MaterialBibliografico*);
-        MaterialBibliografico* mostrarMaterial();
+        void mostrarMaterial();
         MaterialBibliografico* buscarMaterial(string);
         ~Biblioteca();
 };
