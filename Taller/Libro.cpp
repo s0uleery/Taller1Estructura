@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Libro :: Libro(nombre,isbn,autor,prestado,fechaDePublicacion,resumen){
+Libro :: Libro(string nombre,int isbn,string autor,bool prestado,string fechaDePublicacion,string resumen) : MaterialBibliografico(nombre,isbn,autor,prestado){
     this -> fechaDePublicacion = fechaDePublicacion;
     this -> resumen = resumen;
 }
@@ -17,10 +17,10 @@ void Libro :: setResumen(string resumen){this -> resumen = resumen;}
 
 void Libro :: mostrarInformacion(){
     MaterialBibliografico :: mostrarInformacion();
-    cout << "Fecha de publicacion: " << fechaDePublicacion << endl<;
+    cout << "Fecha de publicacion: " << fechaDePublicacion << endl;
     cout << "Resumen: " << resumen << endl;
 }
 
 Libro :: ~Libro(){
-    cout<< "Se elimina el material" << this -> nombre << " , " << this -> isbn << endl;
+    cout<< "Se elimina el material" << this -> getNombre() << " , " << this -> getIsbn() << endl;
 }
