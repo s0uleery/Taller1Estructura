@@ -10,15 +10,15 @@ class Revista : public MaterialBibliografico
         string mesPublicacion;
 
     public:
-        Revista(nombre,isbn,autor,prestado,numeroEdicion,mesPublicacion);
+        Revista(string,int, string, bool,int,string);
 
-        string getNumeroEdicion();
+        int getNumeroEdicion();
         string getMesPublicacion();
 
-        void setNumeroEdicion(string);
+        void setNumeroEdicion(int);
         void setMesPublicacion(string);
         
         void mostrarInformacion();
         virtual ~Revista(); //no estoy segura
 
-}
+};
