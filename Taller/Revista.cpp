@@ -2,6 +2,8 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 Revista :: Revista(nombre,isbn,autor,prestado,numeroEdicion,mesPublicacion){
     this -> numeroEdicion = numeroEdicion;
     this -> mesPublicacion = mesPublicacion;
