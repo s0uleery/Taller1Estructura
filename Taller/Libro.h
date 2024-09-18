@@ -10,7 +10,7 @@ class Libro : public MaterialBibliografico
         string resumen;
 
     public:
-        Libro(nombre,isbn,autor,prestado,fechaDePublicacion,resumen);
+        Libro(string,int, string, bool,string,string);
 
         string getFechaDePublicacion();
         string getResumen();
@@ -20,4 +20,4 @@ class Libro : public MaterialBibliografico
 
         void mostrarInformacion();
         virtual ~Libro();
-}
+};
