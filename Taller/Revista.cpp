@@ -15,6 +15,8 @@ void Revista :: setMesPublicacion(string mesPublicacion){this -> mesPublicacion 
 
 void Revista :: mostrarInformacion(){
     MaterialBibliografico :: mostrarInformacion();
+    cout << "Numero de edicion: " << fechaDePublicacion << endl;
+    cout << "Mes de publicacion: " << mesPublicacion << endl;
 }
 
 Revista :: ~Revista(){

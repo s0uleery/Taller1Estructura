@@ -20,7 +20,12 @@ void MaterialBibliografico :: setIsbn(int isbn){this -> isbn = isbn;}
 void MaterialBibliografico :: setAutor(string autor){this -> autor = autor;}
 void MaterialBibliografico :: setPrestado(bool prestado){this -> prestado = prestado;}
 
-void MaterialBibliografico :: mostrarInformacion(){};
+void MaterialBibliografico :: mostrarInformacion(){
+    cout<< "Nombre: " << nombre << endl;
+    cout<< "ISBN: " << isbn << endl;
+    cout<< "Autor: " << autor << endl;
+    cout<< "Prestado: " << prestado << endl;
+};
 
 MaterialBibliografico :: ~MaterialBibliografico(){
     cout<< "Se elimina el material" << this -> nombre << " , " << this -> isbn << endl;
