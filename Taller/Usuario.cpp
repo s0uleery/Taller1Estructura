@@ -7,6 +7,7 @@ using namespace std;
 Usuario :: Usuario(string nombre, int id){
     this -> nombre = nombre;
     this -> id = id;
+    
     for (int i = 0; i < 5; ++i) {
         materialBibliografico[i] = nullptr;
     }
@@ -18,8 +19,8 @@ int Usuario :: getId(){return id;}
 void Usuario :: setNombre(string nombre){this -> nombre = nombre;}
 void Usuario :: setId(int id){this -> id = id;}
 
-Usuario :: ~Usuario(){
-    cout<< "Se elimina el usuario " << this -> nombre << " , " << this -> id << endl;
+Usuario::~Usuario() {
+    cout << "Se elimina el usuario " << this->nombre << " , " << this->id << endl;
 }
 
 void Usuario :: prestarMaterial(MaterialBibliografico* material){
@@ -40,14 +41,15 @@ void Usuario :: devolverMateral(MaterialBibliografico* material){
             break;
         }
     } 
-
 }
 
 void Usuario :: mostrarMaterialesPrestados(){
-    cout<< "Materiales prestados a " << nombre << " (ID: " << id << "):" << endl;
-    for (int i = 0; i < 5; ++i) {
-        if (materialBibliografico[i] != nullptr) {
-            materialBibliografico[i]->mostrarInformacion();
+        cout<< "Materiales prestados a " << nombre << " (ID: " << id << "):" << endl;
+        for (int i = 0; i < 5; ++i) {
+                if (materialBibliografico[i] != nullptr) {
+                    materialBibliografico[i]->mostrarInformacion();
+                }else{
+                    cout << nombre << " no tiene materiales prestados" << endl;
+                }
         }
-    }
 }
