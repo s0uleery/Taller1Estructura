@@ -248,9 +248,7 @@ int main() {
             break;
 
             default:
-            cout << "Opción no válida. Presione Enter para continuar..." << endl;
-            cin.ignore();
-            cin.get(); 
+            cout << "Opción no válida..." << endl;
             break;
         } 
 
