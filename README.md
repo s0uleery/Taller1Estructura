@@ -1,4 +1,4 @@
-# Taller1Estructura
+# Taller1 Estructura de datos
 Libro("papelucho", 123456, "marcela paz", false, "1/12/1947", "papelucho, se trata de su diario de vida donde relata el mundo visto desde sus ojos de niño, contando sus vivencias y anécdotas"));
 </p>
 Revista("rolling stone", 456789, "jann wenner", false, 789, "junio"));
