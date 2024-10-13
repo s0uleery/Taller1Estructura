@@ -24,32 +24,44 @@ Usuario::~Usuario() {
 }
 
 void Usuario :: prestarMaterial(MaterialBibliografico* material){
-    for(int i = 0; i < 5; ++i){
-        if(materialBibliografico[i] == nullptr){
+    bool prestado = false;
+    
+    for (int i = 0; i < 5; ++i) {
+        if (materialBibliografico[i] == nullptr) {
             materialBibliografico[i] = material;
-            material -> setPrestado(true);
+            material->setPrestado(true);
+            prestado = true;
             break;
         }
-    }  
+    }
+
+    if (!prestado) {
+        cout << "No se puede prestar más materiales. Límite alcanzado (5 materiales)." << endl;
+    }
 }
 
-void Usuario :: devolverMateral(MaterialBibliografico* material){
-        for(int i = 0; i < 5; ++i){
-        if(materialBibliografico[i] == material){
+void Usuario :: devolverMaterial(MaterialBibliografico* material){
+    for (int i = 0; i < 5; ++i) {
+        if (materialBibliografico[i] == material) {
             materialBibliografico[i] = nullptr;
-            material -> setPrestado(false);
-            break;
+            material->setPrestado(false);
+            return;
         }
-    } 
+    }
+    cout << "Material no encontrado entre los prestados." << endl; 
 }
 
 void Usuario :: mostrarMaterialesPrestados(){
-        cout<< "Materiales prestados a " << nombre << " (ID: " << id << "):" << endl;
-        for (int i = 0; i < 5; ++i) {
-                if (materialBibliografico[i] != nullptr) {
-                    materialBibliografico[i]->mostrarInformacion();
-                }else{
-                    cout << nombre << " no tiene materiales prestados" << endl;
-                }
+    cout << "Materiales prestados a " << nombre << " (ID: " << id << "):" << endl;
+    bool tieneMateriales = false;
+    
+    for (int i = 0; i < 5; ++i) {
+        if (materialBibliografico[i] != nullptr) {
+            materialBibliografico[i]->mostrarInformacion();
+            tieneMateriales = true;
         }
+    }
+    if (!tieneMateriales) {
+        cout << nombre << " no tiene materiales prestados." << endl;
+    }
 }
