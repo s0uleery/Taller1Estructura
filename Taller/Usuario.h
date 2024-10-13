@@ -20,7 +20,7 @@ public:
     void setId(int);
 
     void prestarMaterial(MaterialBibliografico*);
-    void devolverMateral(MaterialBibliografico*);
+    void devolverMaterial(MaterialBibliografico*);
     void mostrarMaterialesPrestados();
     ~Usuario();
 };
