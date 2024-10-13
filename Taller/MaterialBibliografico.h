@@ -26,6 +26,4 @@ class MaterialBibliografico
 
     virtual void mostrarInformacion();
     virtual ~MaterialBibliografico();
-    //falta el destructor 
-    //creo que lo hice bien :P
 };
