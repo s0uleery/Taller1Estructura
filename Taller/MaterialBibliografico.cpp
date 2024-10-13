@@ -29,5 +29,4 @@ void MaterialBibliografico :: mostrarInformacion(){
 
 MaterialBibliografico :: ~MaterialBibliografico(){
     cout<< "Se elimina el material" << this -> nombre << " , " << this -> isbn << endl;
-    //creo que esta bien hecho :P
 };
